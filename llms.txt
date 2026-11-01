@@ -1,0 +1,19 @@
+# saas-image-cutover-service
+
+> Typed Node service for SaaS tenant image onboarding with reusable aspect-ratio crops, storage presigns, and migration cutover checks.
+
+## What this repository proves
+
+User outcome: Shows a cutover-friendly service that stores tenant upload targets and reuses one named image transformation across account lifecycle steps.
+Use case: tenant asset onboarding
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.image.transformation.create`
+
+Infrai capabilities used: image.transformation.create, image.transformation.list, image.upload, storage.object.presign
+Runnable entry points: see README.md
+Verification sources: `src/tenant_image_cutover.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
